@@ -1,0 +1,41 @@
+.explorer {
+  font-size: 10.5px;
+  color: #b4b2b2;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #706e6eb2;
+}
+
+.menu-item {
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ffffff63;
+}
+
+.body-button {
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.chevron {
+  position: absolute;
+  left: 66px;
+}

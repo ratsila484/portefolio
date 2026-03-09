@@ -1,0 +1,22 @@
+section {
+  color: #b4b2b2;
+}
+
+.menu {
+  display: flex;
+  height: 95vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.menu-item {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  color: #fff;
+}
