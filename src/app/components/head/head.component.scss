@@ -3,16 +3,20 @@ header {
   align-items: center;
   color: #928d8d;
   font-size: 14px;
-  background-color: rgba(14, 10, 15, 0.801);
+  background-color: #181522;
   padding-left: 10px;
   padding-right: 10px;
 }
+
+
 
 .head-item {
   margin-left: 10px;
 }
 
 .logo {
+	display: flex;
+	align-items: center;
   height: 30px;
 }
 
@@ -51,7 +55,7 @@ header {
 }
 
 .control-pannel {
-  border: 1px solid rgba(255, 255, 255, 0.425);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 5px;
   display: flex;
   width: 80%;
@@ -77,4 +81,17 @@ header {
   height: 28px;
   transform: translateX(10px);
   background-color: rgba(2, 2, 43, 0.815);
+}
+
+/*
+responsive
+*/
+
+@media screen and (max-width : 1700px){
+	.menu-item{
+		margin: 0;
+	}
+	.nav-button .menu-item{
+		display: none;
+	}
 }

@@ -1,32 +1,36 @@
 .head {
-  border-bottom: 0.5px solid #ffffff8a;
-  position: fixed;
-  width: 100%;
+	position: fixed;
+	width: 100%;
 }
 
 .body {
-  position: fixed;
-  top: 30.5px;
-  display: flex;
+	position: fixed;
+	top: 30.5px;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
 }
 
 .side-bar {
-  width: 60px;
-  height: 100vh;
-  background-color: rgba(14, 10, 15, 0.801);
-  border-right: 0.5px solid #ffffff8a;
+	width: 60px;
+	height: 100vh;
+	background-color: #181522;
+	border-right: 0.5px solid #ffffff8a;
 }
 
 .explorer {
-  width: 250px;
-  background-color: rgba(0, 0, 0, 0.801);
+	width: 250px;
+	background-color: #181522;
 }
 
-.center-header{
-    border: 1px solid red;
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
 }
 
 .center-body {
-  background-color: rgba(14, 10, 15, 0.801);
-  height: 96vh;
+	background-color: #181522;
+	height: 96vh;
 }

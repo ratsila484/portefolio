@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './center-header.component.scss'
 })
 export class CenterHeaderComponent {
-
+	onButtonClick(nom:string){
+		alert(nom);
+	}
 }
