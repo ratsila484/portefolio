@@ -4,21 +4,79 @@
     <span class="button"><i class="fa fa-bars"></i></span>
   </div>
   <div class="body">
+
     <div class="menu-item">
-      <span class="chevron"><i class="fa fa-chevron-right"></i></span>
-      <span class="body-button">OPEN EDITOR</span>
+      <div class="menu-header" (click)="toggle('openEditor')">
+        <span class="chevron" [class.open]="sections['openEditor']">
+          <i class="fa fa-chevron-right"></i>
+        </span>
+        <span class="body-button">OPEN EDITOR</span>
+      </div>
+      <div class="file-tree" *ngIf="sections['openEditor']">
+        <div class="file-item" *ngFor="let file of files['openEditor']">
+          <i class="fa" [ngClass]="getFileIcon(file)"></i>
+          <span>{{ file }}</span>
+        </div>
+      </div>
     </div>
+
     <div class="menu-item">
-      <span class="chevron"><i class="fa fa-chevron-right"></i></span>
-      <span class="body-button">PORTEFOLIO</span>
+      <div class="menu-header" (click)="toggle('portfolio')">
+        <span class="chevron" [class.open]="sections['portfolio']">
+          <i class="fa fa-chevron-right"></i>
+        </span>
+        <span class="body-button">PORTFOLIO</span>
+      </div>
+      <div class="file-tree" *ngIf="sections['portfolio']">
+        <div class="file-item folder" (click)="toggle('portfolioSrc')">
+          <span class="chevron small" [class.open]="sections['portfolioSrc']">
+            <i class="fa fa-chevron-right"></i>
+          </span>
+          <i class="fa fa-folder{{ sections['portfolioSrc'] ? '-open' : '' }}"></i>
+          <span>src</span>
+        </div>
+        <div class="file-tree nested" *ngIf="sections['portfolioSrc']">
+          <div class="file-item" *ngFor="let file of files['portfolioSrc']">
+            <i class="fa" [ngClass]="getFileIcon(file)"></i>
+            <span>{{ file }}</span>
+          </div>
+        </div>
+        <div class="file-item" *ngFor="let file of files['portfolio']">
+          <i class="fa" [ngClass]="getFileIcon(file)"></i>
+          <span>{{ file }}</span>
+        </div>
+      </div>
     </div>
+
     <div class="menu-item">
-      <span class="chevron"><i class="fa fa-chevron-right"></i></span>
-      <span class="body-button">OUTLINE</span>
+      <div class="menu-header" (click)="toggle('outline')">
+        <span class="chevron" [class.open]="sections['outline']">
+          <i class="fa fa-chevron-right"></i>
+        </span>
+        <span class="body-button">OUTLINE</span>
+      </div>
+      <div class="file-tree" *ngIf="sections['outline']">
+        <div class="file-item" *ngFor="let file of files['outline']">
+          <i class="fa" [ngClass]="getFileIcon(file)"></i>
+          <span>{{ file }}</span>
+        </div>
+      </div>
     </div>
+
     <div class="menu-item">
-      <span class="chevron"><i class="fa fa-chevron-right"></i></span>
-      <span class="body-button">TIMELINE</span>
+      <div class="menu-header" (click)="toggle('timeline')">
+        <span class="chevron" [class.open]="sections['timeline']">
+          <i class="fa fa-chevron-right"></i>
+        </span>
+        <span class="body-button">TIMELINE</span>
+      </div>
+      <div class="file-tree" *ngIf="sections['timeline']">
+        <div class="file-item" *ngFor="let file of files['timeline']">
+          <i class="fa" [ngClass]="getFileIcon(file)"></i>
+          <span>{{ file }}</span>
+        </div>
+      </div>
     </div>
+
   </div>
 </div>

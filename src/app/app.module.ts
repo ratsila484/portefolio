@@ -20,10 +20,24 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { ExplorerComponent } from './components/explorer/explorer.component';
 import { CenterHeaderComponent } from './components/center-header/center-header.component';
 import { CenterBodyComponent } from './components/center-body/center-body.component';
+import { UserComponent } from './components/user/user.component';
+import { ListProjectComponent } from './components/list-project/list-project.component';
+import { NgxJsonViewerComponent, NgxJsonViewerModule } from 'ngx-json-viewer';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, MainComponent, HeadComponent, SideBarComponent, ExplorerComponent, CenterHeaderComponent, CenterBodyComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    MainComponent,
+    HeadComponent,
+    SideBarComponent,
+    ExplorerComponent,
+    CenterHeaderComponent,
+    CenterBodyComponent,
+    UserComponent,
+    ListProjectComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, NgxJsonViewerModule],
   providers: [
     provideClientHydration(withEventReplay()),
     provideCharts(withDefaultRegisterables()),

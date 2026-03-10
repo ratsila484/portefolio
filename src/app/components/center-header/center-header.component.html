@@ -1,6 +1,10 @@
 <div class="center-header">
   <div class="menu">
-	<div class="menu-item active" (click)="onButtonClick('hello')">
+    <div
+      class="menu-item"
+      [ngClass]="{ active: isClickedWelcome }"
+      (click)="onPageClicked('welcome')"
+    >
       <div class="img">
         <img src="vscode.png" alt="logo" />
       </div>
@@ -11,23 +15,31 @@
         <span>x</span>
       </div>
     </div>
-    <div class="menu-item">
+    <div
+      class="menu-item"
+      [ngClass]="{ active: isClickedUser }"
+      (click)="onPageClicked('user')"
+    >
       <div class="img">
         <img src="html-logo.png" alt="logo" />
       </div>
-      <div class="menu-name" >
-        <span class="name">User.html</span>
+      <div class="menu-name">
+        <span class="name">Preview README.md </span>
       </div>
       <div class="menu-close">
         <span>x</span>
       </div>
     </div>
-    <div class="menu-item">
+    <div
+      class="menu-item"
+      [ngClass]="{ active: isClickedProjet }"
+      (click)="onPageClicked('projet')"
+    >
       <div class="img">
         <img src="css-logo.png" alt="logo" />
       </div>
       <div class="menu-name">
-        <span class="name">Liste_projet.css</span>
+        <span class="name">Liste_projet.json</span>
       </div>
       <div class="menu-close">
         <span>x</span>

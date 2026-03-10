@@ -1,4 +1,4 @@
-.explorer {
+/*.explorer {
   font-size: 10.5px;
   color: #b4b2b2;
 }
@@ -36,5 +36,114 @@
 
 .chevron{
 	margin-left: 5px;
+}*/
+.explorer {
+  font-size: 10.5px;
+  color: #b4b2b2;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+
+.button {
+  padding: 5px;
+  border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+    background-color: #706e6eb2;
+  }
+}
+
+/* ── Section header ── */
+.menu-item {
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+
+  &:hover {
+    background-color: #2a2d2e;
+  }
+}
+
+.body-button {
+  font-weight: bold;
+  margin-left: 5px;
+  user-select: none;
+}
+
+/* ── Chevron rotation ── */
+.chevron {
+  margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.15s ease;
+
+  i { font-size: 9px; }
+
+  &.open {
+    transform: rotate(90deg);
+  }
+
+  &.small i { font-size: 8px; }
+}
+
+/* ── File tree ── */
+.file-tree {
+  overflow: hidden;
+  animation: slideDown 0.15s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px 3px 28px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    background-color: #2a2d2e;
+  }
+
+  i {
+    font-size: 11px;
+    flex-shrink: 0;
+    color: #858585;
+  }
+
+  /* icon colors by type */
+  .fa-html5    { color: #e44d26; }
+  .fa-css3     { color: #264de4; }
+  .fa-file-code-o { color: #3178c6; }
+  .fa-file-text-o { color: #cccccc; }
+}
+
+.file-item.folder {
+  padding-left: 14px;
+  font-weight: 500;
+  color: #d4d4d4;
+
+  i.fa-folder,
+  i.fa-folder-open { color: #dcb67a; }
+}
+
+/* nested sub-tree indented further */
+.file-tree.nested .file-item {
+  padding-left: 44px;
 }
 

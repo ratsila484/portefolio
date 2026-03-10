@@ -8,15 +8,13 @@ header {
   padding-right: 10px;
 }
 
-
-
 .head-item {
   margin-left: 10px;
 }
 
 .logo {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
   height: 30px;
 }
 
@@ -26,7 +24,6 @@ header {
 }
 
 .menu {
-  border: 1ps solid green;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -71,8 +68,8 @@ header {
   margin-right: 5px;
 }
 
-.right{
-    display: flex;
+.right {
+  display: flex;
 }
 
 .window-button {
@@ -87,11 +84,11 @@ header {
 responsive
 */
 
-@media screen and (max-width : 1700px){
-	.menu-item{
-		margin: 0;
-	}
-	.nav-button .menu-item{
-		display: none;
-	}
+@media screen and (max-width: 1700px) {
+  .menu-item {
+    margin: 0;
+  }
+  .nav-button .menu-item {
+    display: none;
+  }
 }
