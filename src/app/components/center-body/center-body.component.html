@@ -55,11 +55,11 @@
     </div>
   </div>
   <!-- user section -->
-  <div *ngIf="pageBody == 'user'" class="user-bloc">
-	<app-user></app-user>
+  <div *ngIf="pageBody == 'user' || pageBody == 'README.md'" class="user-bloc">
+    <app-user></app-user>
   </div>
   <!-- project section -->
-  <div *ngIf="pageBody == 'projet'" class="user-bloc">
-	<app-list-project></app-list-project>
+  <div *ngIf="pageBody == 'projet' || pageBody == 'Liste_projet.json'" class="projet-bloc">
+    <app-list-project></app-list-project>
   </div>
 </div>

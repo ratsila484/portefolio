@@ -10,4 +10,6 @@ import { Component, input, Input } from '@angular/core';
 export class CenterBodyComponent {
   @Input() pageBody: string = 'welcome';
   onCliked: boolean = false;
+
+
 }

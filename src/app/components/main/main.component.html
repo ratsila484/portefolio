@@ -4,18 +4,27 @@
   </div>
   <div class="body">
     <div class="side-bar">
-      <app-side-bar></app-side-bar>
+      <app-side-bar
+        (buttonClicked)="onButtonSideClicked($event)"
+      ></app-side-bar>
     </div>
     <div class="explorer">
-      <app-explorer></app-explorer>
+      <app-explorer (page)="onListenClicked($event)"></app-explorer>
     </div>
     <div class="center">
       <div class="center-header">
-        <app-center-header (page)="onListenClicked($event)"></app-center-header>
+        <app-center-header
+          (page)="onListenClicked($event)"
+          [pageListen]="page"
+          [newPage]="functionName"
+        ></app-center-header>
       </div>
       <div class="center-body">
         <app-center-body [pageBody]="page"></app-center-body>
       </div>
     </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
   </div>
 </div>

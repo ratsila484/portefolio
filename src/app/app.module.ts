@@ -23,6 +23,7 @@ import { CenterBodyComponent } from './components/center-body/center-body.compon
 import { UserComponent } from './components/user/user.component';
 import { ListProjectComponent } from './components/list-project/list-project.component';
 import { NgxJsonViewerComponent, NgxJsonViewerModule } from 'ngx-json-viewer';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NgxJsonViewerComponent, NgxJsonViewerModule } from 'ngx-json-viewer';
     CenterBodyComponent,
     UserComponent,
     ListProjectComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgxJsonViewerModule],
   providers: [

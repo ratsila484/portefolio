@@ -20,18 +20,9 @@
   --heading-color: #e6edf3;
 }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-  line-height: 1.7;
-  padding: 40px 20px;
-}
 
 .readme-wrapper {
   color: #fff;
-  max-width: 860px;
   margin: 0 auto;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -43,7 +34,6 @@ body {
 .file-header {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  padding: 10px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -230,14 +220,15 @@ ul.md-list li .institution {
 /* Two-column layout for skills/languages */
 .two-col {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: 0.2fr 1fr;
+  gap: 5px;
   margin-top: 12px;
 }
 
 /* Language bars */
 .lang-item {
   margin: 10px 0;
+  width: 200px;
 }
 
 .lang-name {
@@ -314,14 +305,5 @@ ul.md-list li .institution {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .readme-body {
-    padding: 24px 20px;
-  }
-  .two-col {
-    grid-template-columns: 1fr;
   }
 }

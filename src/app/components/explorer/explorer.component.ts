@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-explorer',
@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './explorer.component.scss',
 })
 export class ExplorerComponent {
+  @Output() page = new EventEmitter<string>();
+
   sections: { [key: string]: boolean } = {
     openEditor: false,
     portfolio: false,
@@ -17,7 +19,7 @@ export class ExplorerComponent {
 
   files: { [key: string]: string[] } = {
     openEditor: ['README.md', 'Liste_projet.json'],
-    portfolio: ['README.md','liste_projet.json'],
+    portfolio: ['README.md', 'Liste_projet.json'],
     portfolioSrc: [
       'app.component.ts',
       'app.component.html',
@@ -25,12 +27,8 @@ export class ExplorerComponent {
       'explorer.component.ts',
       'explorer.component.html',
     ],
-    outline: ['ExplorerComponent', 'toggle()', 'getFileIcon()'],
-    timeline: [
-      '2020 – Baccalauréat.md',
-      '2021 – ISPM.md',
-      '2026 – 42 Antananarivo.md',
-    ],
+    outline: [],
+    timeline: [],
   };
 
   toggle(section: string): void {
@@ -54,5 +52,9 @@ export class ExplorerComponent {
       default:
         return 'fa-file-o';
     }
+  }
+
+  clickFile(nom: string) {
+    this.page.emit(nom);
   }
 }

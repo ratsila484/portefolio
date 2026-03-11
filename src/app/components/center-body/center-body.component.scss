@@ -1,9 +1,8 @@
 .main {
   display: flex;
-  align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.233);
-  height: 95vh;
+  height: 90vh;
   overflow-y: auto;
 }
 
@@ -24,7 +23,6 @@
 }
 
 .welcome-bloc {
-  transform: translateY(-100px);
   width: 80%;
 }
 
@@ -68,6 +66,18 @@
 
 .bloc-content:hover {
   color: rgb(13, 142, 182);
+}
+
+//welcom-bloc
+.welcome-bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+//user-bloc
+.user-bloc{
+  width: 100%;
 }
 
 ///responsive
