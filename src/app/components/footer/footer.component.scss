@@ -8,6 +8,13 @@ header {
   padding-right: 10px;
 }
 
+
+@media screen and (max-width: 390px) {
+	.menu-item .texte{
+		display: none;
+	}
+}
+
 .logo {
   display: flex;
   align-items: center;

@@ -80,10 +80,15 @@
   width: 100%;
 }
 
+projet-bloc
+.projet-bloc{
+	overflow-y: hidden;
+}
+
 ///responsive
 @media screen and (max-width: 1000px) {
   .welcome-bloc {
-    transform: translateY(0px);
+    transform: translateY(50px);
   }
   .body {
     display: flex;
@@ -102,5 +107,12 @@
   .pdp img {
     width: 250px;
     height: 300px;
+  }
+}
+
+//responsive mobile
+@media screen and (max-width: 390px) {
+	.welcome-bloc {
+    transform: translateY(150px);
   }
 }
