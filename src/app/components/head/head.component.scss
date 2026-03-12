@@ -94,9 +94,9 @@ responsive
 }
 
 //responsive mobile
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 600px) {
 	header{
-		width: 390px;
+		width: 100%;
 		margin: 0;
 	}
 	.center, .right .menu-section, .left .menu-item{

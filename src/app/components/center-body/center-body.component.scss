@@ -111,8 +111,9 @@ projet-bloc
 }
 
 //responsive mobile
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 600px) {
 	.welcome-bloc {
-    transform: translateY(150px);
+    transform: translateY(20%);
+	height: 100vh;
   }
 }
